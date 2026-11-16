@@ -29,5 +29,5 @@ internal static class Program
             new Kasutaja { Nimi = "Kasutaja", Email = "kasutaja@pood.ee",
                            ParoolHash = PasswordHelper.Hash("kasutaja123"), Roll = "kasutaja" });
         db.SaveChanges();
-    }
+    } 
 }
