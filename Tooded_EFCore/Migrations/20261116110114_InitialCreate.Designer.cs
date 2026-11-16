@@ -10,7 +10,7 @@ using Tooded_EFCore;
 namespace Tooded_EFCore.Migrations
 {
     [DbContext(typeof(ToodedContext))]
-    [Migration("20261112074319_InitialCreate")]
+    [Migration("20261116110114_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

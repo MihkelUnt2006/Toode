@@ -21,4 +21,8 @@
     <PackageReference Include="PdfSharpCore" Version="1.3.65" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
