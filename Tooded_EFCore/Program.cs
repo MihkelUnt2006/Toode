@@ -10,10 +10,17 @@ internal static class Program
         ApplicationConfiguration.Initialize();
         Kaustad.Loo();
 
-        using (var db = new ToodedContext())
+        try
         {
-            db.Database.Migrate();
+            using var db = new ToodedContext();
+            db.Database.Migrate();      // loob andmebaasi ja rakendab migratsioonid
             LooAlgkasutajad(db);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Andmebaasi ettevalmistamine ebaõnnestus:\n" + ex.Message,
+                "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
         }
 
         Application.Run(new LoginForm());

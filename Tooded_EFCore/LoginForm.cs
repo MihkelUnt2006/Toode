@@ -44,6 +44,7 @@ public partial class LoginForm : Form
             return;
         }
 
+        AktiivneKasutaja.Id = kasutaja.Id;
         AktiivneKasutaja.Nimi = kasutaja.Nimi;
         AktiivneKasutaja.Roll = kasutaja.Roll;
 
